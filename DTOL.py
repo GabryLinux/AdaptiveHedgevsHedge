@@ -11,7 +11,7 @@ class Hedge:
     def __init__(self, K, eta):
         self.K = K
         self.eta = eta
-        self.weights =  [1.0 for _ in range(K)]
+        self.weights =  [1.0/K for _ in range(K)]
 
     # Returns the normalized weights associated to each expert at the current round.
     def get_probabilities(self):
